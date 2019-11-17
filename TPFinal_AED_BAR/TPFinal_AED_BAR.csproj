@@ -50,10 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EstruturasDeDados\Arvore.cs" />
-    <Compile Include="EstruturasDeDados\Fila.cs" />
+    <Compile Include="EstruturasDeDados\Fila\Fila.cs" />
     <Compile Include="EstruturasDeDados\Hash.cs" />
     <Compile Include="EstruturasDeDados\Lista.cs" />
-    <Compile Include="EstruturasDeDados\Pilha.cs" />
+    <Compile Include="EstruturasDeDados\ArvoreBinaria\ArvoreBinaria.cs" />
+    <Compile Include="EstruturasDeDados\ArvoreBinaria\Node.cs" />
+    <Compile Include="EstruturasDeDados\ArvoreBinaria\NodeInfo.cs" />
+    <Compile Include="EstruturasDeDados\Pilha\Celula.cs" />
+    <Compile Include="EstruturasDeDados\Pilha\Pilha.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,5 +97,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

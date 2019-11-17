@@ -23,5 +23,7 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.Pilha {
             quantidade--;
             return item;
         }
+
+        public  
     }
 }
