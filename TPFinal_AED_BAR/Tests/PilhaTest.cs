@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Diagnostics;
-using TPFinal_AED_BAR.EstruturasDeDados;
+using TPFinal_AED_BAR.EstruturasDeDados.Pilha;
 
 namespace TPFinal_AED_BAR.Tests {
     class PilhaTest {
-
-        private Pilha p;
+        private Pilha pilha;
         public PilhaTest() {
-            p = new Pilha();
+            pilha = new Pilha();
         }
 
-        public PilhaTest(Pilha p) {
-            this.p = p;
+        public PilhaTest(Pilha pilha) {
+            this.pilha = pilha;
         }
 
         public double empilhaTest(Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            p.empilha(item);
+            pilha.empilhar(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
@@ -25,15 +24,15 @@ namespace TPFinal_AED_BAR.Tests {
         public double dempilhaTest() {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            p.dempilha();
+            pilha.desempilhar();
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double getPosicaoTest(Object item) {
+        public double imprimirTest() {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            p.getItem(item);
+            pilha.imprimir();
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }

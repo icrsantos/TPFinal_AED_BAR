@@ -4,7 +4,7 @@ using TPFinal_AED_BAR.EstruturasDeDados;
 
 namespace TPFinal_AED_BAR.Tests {
     class ArvoreTest {
-        private Arvore a;
+    /*    private Arvore a;
         public ArvoreTest() {
             a = new Arvore();
         }
@@ -51,6 +51,6 @@ namespace TPFinal_AED_BAR.Tests {
             a.pesquisa(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
-        }
+        }*/
     }
 }

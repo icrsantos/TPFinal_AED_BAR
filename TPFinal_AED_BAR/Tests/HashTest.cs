@@ -4,7 +4,7 @@ using TPFinal_AED_BAR.EstruturasDeDados;
 
 namespace TPFinal_AED_BAR.Tests {
     class HashTest {
-        private Hash h;
+       /* private Hash h;
         public HashTest() {
             h = new Hash();
         }
@@ -35,6 +35,6 @@ namespace TPFinal_AED_BAR.Tests {
             h.pesquisa(chave);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
-        }
+        }*/
     }
 }

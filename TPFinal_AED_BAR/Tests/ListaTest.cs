@@ -4,7 +4,7 @@ using TPFinal_AED_BAR.EstruturasDeDados;
 
 namespace TPFinal_AED_BAR.Tests {
     class ListaTest {
-        private Lista l;
+       /* private Lista l;
         public ListaTest() {
             l = new Lista();
         }
@@ -59,6 +59,6 @@ namespace TPFinal_AED_BAR.Tests {
             l.getItem(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
-        }
+        }*/
     }
 }

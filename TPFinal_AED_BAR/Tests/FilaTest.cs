@@ -4,7 +4,7 @@ using TPFinal_AED_BAR.EstruturasDeDados;
 
 namespace TPFinal_AED_BAR.Tests {
     class FilaTest {
-        private Fila f;
+       /* private Fila f;
         public FilaTest() {
             f = new Fila();
         }
@@ -35,6 +35,6 @@ namespace TPFinal_AED_BAR.Tests {
             f.getItem(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
-        }
+        }*/
     }
 }

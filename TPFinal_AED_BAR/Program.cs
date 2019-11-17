@@ -13,7 +13,7 @@ namespace TPFinal_AED_BAR {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new formPrincipal());
         }
     }
 }
