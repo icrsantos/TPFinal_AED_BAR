@@ -353,5 +353,78 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/csharp
-../TPFinal_AED_BAR.csproj
+# vim
+*.txt~
+*.swp
+*.swo
+
+# Temp files when opening LibreOffice on ubuntu
+.~lock.*
+ 
+# svn
+.svn
+
+# CVS - Source Control
+**/CVS/
+
+# Remainings from resolving conflicts in Source Control
+*.orig
+
+# SQL Server files
+**/App_Data/*.mdf
+**/App_Data/*.ldf
+**/App_Data/*.sdf
+
+
+#LightSwitch generated files
+GeneratedArtifacts/
+_Pvt_Extensions/
+ModelManifest.xml
+
+# =========================
+# Windows detritus
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac desktop service store files
+.DS_Store
+
+# SASS Compiler cache
+.sass-cache
+
+# Visual Studio 2014 CTP
+**/*.sln.ide
+
+# Visual Studio temp something
+.vs/
+
+# dotnet stuff
+project.lock.json
+
+# VS 2015+
+*.vc.vc.opendb
+*.vc.db
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Output folder used by Webpack or other FE stuff
+**/node_modules/*
+**/wwwroot/*
+
+# SpecFlow specific
+*.feature.cs
+*.feature.xlsx.*
+*.Specs_*.html
