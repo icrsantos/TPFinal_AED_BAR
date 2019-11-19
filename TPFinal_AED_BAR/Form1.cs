@@ -6,8 +6,7 @@ using TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria;
 using TPFinal_AED_BAR.EstruturasDeDados.Lista;
 using TPFinal_AED_BAR.EstruturasDeDados.Hash;
 using System.Windows.Forms;
-using System.Runtime.Remoting;
-using System.Runtime.Remoting.Channels.Tcp;
+using TPFinal_AED_BAR.Tests;
 
 namespace TPFinal_AED_BAR {
     public partial class formPrincipal:MaterialSkin.Controls.MaterialForm {
@@ -33,15 +32,15 @@ namespace TPFinal_AED_BAR {
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Orange900, Primary.Orange800,
-                Primary.Orange800, Accent.Orange700,
-                TextShade.BLACK
+                Primary.Indigo800, Primary.Indigo700,
+                Primary.Indigo400, Accent.Indigo400,
+                TextShade.WHITE
             );
         }
 
         private void buttonListar_Click(object sender, EventArgs e) {
             if(tpEstrutura == null) {
-                MessageBox.Show("Operação bloqueada!\n\nSelecione o tipo de estrutura que deseja trabalhar.");
+                MessageBox.Show("\tOperação bloqueada!\n\nSelecione o tipo de estrutura que deseja trabalhar.");
             } else {
                 String[] sequencia = getSequencia();
 
@@ -78,9 +77,9 @@ namespace TPFinal_AED_BAR {
 
         public String[] getSequencia() {
             String[] sequencia = {};
-            String textoTela = TextSequencia.Text;
-            if(textoTela == null) {
-                MessageBox.Show("Operação bloqueada!\n\nDigite a sequência que deseja manipular.");
+            String textoTela   = TextSequencia.Text;
+            if(textoTela == null || textoTela == "") {
+                MessageBox.Show("\tOperação bloqueada!\n\nDigite a sequência que deseja manipular.");
             } else {
                 char[] delimitador = {';'};
                 sequencia = textoTela.Split(delimitador);
@@ -93,7 +92,7 @@ namespace TPFinal_AED_BAR {
             int value;
             foreach(String number in sequencia) {
                 if(!int.TryParse(number, out value)) {
-                    MessageBox.Show("Operação bloqueada!\n\nA estrutura selecionada só aceita dados numéricos.");
+                    MessageBox.Show("\tOperação bloqueada!\n\nA estrutura selecionada só aceita dados numéricos.");
                     return false;
                 }
             }
@@ -189,6 +188,17 @@ namespace TPFinal_AED_BAR {
                         listarDados(hash.imprimir(), "Tabela Hash", true);
                     break;
                 }
+            }
+        }
+
+        private void buttonRelatorioTest_Click(object sender, EventArgs e) {
+            String[] sequencia = getSequencia();
+
+            if(sequencia.Length > 0 && validarSequenciaInteger(sequencia)) {
+                FormRelatorio frelatorio = new FormRelatorio();
+                this.Hide();
+                frelatorio.mostraRelatorio(Relatorio.gerarRelatorio(sequencia));
+                frelatorio.ShowDialog();
             }
         }
     }

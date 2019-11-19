@@ -29,7 +29,7 @@ namespace TPFinal_AED_BAR.Tests {
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double getPosicaoTest(Object item) {
+        public double pesquisaTest(Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             fila.pesquisa(item);
