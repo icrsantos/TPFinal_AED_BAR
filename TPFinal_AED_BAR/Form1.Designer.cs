@@ -32,24 +32,37 @@
             this.labelSequencia = new MaterialSkin.Controls.MaterialLabel();
             this.buttonListar = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelExemplo = new MaterialSkin.Controls.MaterialLabel();
-            this.buttonQuantidade = new MaterialSkin.Controls.MaterialFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gridDataEstruturas = new System.Windows.Forms.DataGridView();
+            this.columnsEstrutura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnSequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelQuantidade = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDataEstruturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TextSequencia
             // 
             this.TextSequencia.Depth = 0;
-            this.TextSequencia.Hint = "";
-            this.TextSequencia.Location = new System.Drawing.Point(12, 105);
+            this.TextSequencia.Hint = "Inclua os valores separados por \';\'. Exemplo: 1;2;3;4";
+            this.TextSequencia.Location = new System.Drawing.Point(14, 113);
             this.TextSequencia.MouseState = MaterialSkin.MouseState.HOVER;
             this.TextSequencia.Name = "TextSequencia";
             this.TextSequencia.PasswordChar = '\0';
             this.TextSequencia.SelectedText = "";
             this.TextSequencia.SelectionLength = 0;
             this.TextSequencia.SelectionStart = 0;
-            this.TextSequencia.Size = new System.Drawing.Size(473, 23);
+            this.TextSequencia.Size = new System.Drawing.Size(605, 23);
             this.TextSequencia.TabIndex = 0;
             this.TextSequencia.UseSystemPasswordChar = false;
             // 
@@ -57,13 +70,13 @@
             // 
             this.rButtonPilha.Depth = 0;
             this.rButtonPilha.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonPilha.Location = new System.Drawing.Point(200, 174);
+            this.rButtonPilha.Location = new System.Drawing.Point(636, 370);
             this.rButtonPilha.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonPilha.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonPilha.MouseState = MaterialSkin.MouseState.HOVER;
             this.rButtonPilha.Name = "rButtonPilha";
             this.rButtonPilha.Ripple = true;
-            this.rButtonPilha.Size = new System.Drawing.Size(60, 20);
+            this.rButtonPilha.Size = new System.Drawing.Size(70, 22);
             this.rButtonPilha.TabIndex = 1;
             this.rButtonPilha.TabStop = true;
             this.rButtonPilha.Text = "Pilha";
@@ -74,13 +87,13 @@
             // 
             this.rButtonFila.Depth = 0;
             this.rButtonFila.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonFila.Location = new System.Drawing.Point(129, 174);
+            this.rButtonFila.Location = new System.Drawing.Point(636, 268);
             this.rButtonFila.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonFila.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonFila.MouseState = MaterialSkin.MouseState.HOVER;
             this.rButtonFila.Name = "rButtonFila";
             this.rButtonFila.Ripple = true;
-            this.rButtonFila.Size = new System.Drawing.Size(50, 20);
+            this.rButtonFila.Size = new System.Drawing.Size(58, 22);
             this.rButtonFila.TabIndex = 2;
             this.rButtonFila.TabStop = true;
             this.rButtonFila.Text = "Fila";
@@ -91,13 +104,13 @@
             // 
             this.rButtonLista.Depth = 0;
             this.rButtonLista.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonLista.Location = new System.Drawing.Point(284, 174);
+            this.rButtonLista.Location = new System.Drawing.Point(636, 320);
             this.rButtonLista.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonLista.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonLista.MouseState = MaterialSkin.MouseState.HOVER;
             this.rButtonLista.Name = "rButtonLista";
             this.rButtonLista.Ripple = true;
-            this.rButtonLista.Size = new System.Drawing.Size(60, 20);
+            this.rButtonLista.Size = new System.Drawing.Size(70, 22);
             this.rButtonLista.TabIndex = 3;
             this.rButtonLista.TabStop = true;
             this.rButtonLista.Text = "Lista";
@@ -108,13 +121,13 @@
             // 
             this.rButtonArvore.Depth = 0;
             this.rButtonArvore.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonArvore.Location = new System.Drawing.Point(365, 174);
+            this.rButtonArvore.Location = new System.Drawing.Point(636, 219);
             this.rButtonArvore.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonArvore.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonArvore.MouseState = MaterialSkin.MouseState.HOVER;
             this.rButtonArvore.Name = "rButtonArvore";
             this.rButtonArvore.Ripple = true;
-            this.rButtonArvore.Size = new System.Drawing.Size(120, 20);
+            this.rButtonArvore.Size = new System.Drawing.Size(140, 22);
             this.rButtonArvore.TabIndex = 4;
             this.rButtonArvore.TabStop = true;
             this.rButtonArvore.Text = "Árvore Binária";
@@ -125,13 +138,13 @@
             // 
             this.rButtonHash.Depth = 0;
             this.rButtonHash.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonHash.Location = new System.Drawing.Point(507, 174);
+            this.rButtonHash.Location = new System.Drawing.Point(636, 420);
             this.rButtonHash.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonHash.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonHash.MouseState = MaterialSkin.MouseState.HOVER;
             this.rButtonHash.Name = "rButtonHash";
             this.rButtonHash.Ripple = true;
-            this.rButtonHash.Size = new System.Drawing.Size(110, 20);
+            this.rButtonHash.Size = new System.Drawing.Size(128, 22);
             this.rButtonHash.TabIndex = 5;
             this.rButtonHash.TabStop = true;
             this.rButtonHash.Text = "Tabela Hash";
@@ -144,7 +157,7 @@
             this.labelSequencia.Depth = 0;
             this.labelSequencia.Font = new System.Drawing.Font("Roboto", 11F);
             this.labelSequencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelSequencia.Location = new System.Drawing.Point(12, 76);
+            this.labelSequencia.Location = new System.Drawing.Point(14, 85);
             this.labelSequencia.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelSequencia.Name = "labelSequencia";
             this.labelSequencia.Size = new System.Drawing.Size(79, 19);
@@ -156,8 +169,8 @@
             this.buttonListar.AutoSize = true;
             this.buttonListar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonListar.Depth = 0;
-            this.buttonListar.Location = new System.Drawing.Point(492, 103);
-            this.buttonListar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buttonListar.Location = new System.Drawing.Point(631, 100);
+            this.buttonListar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonListar.MouseState = MaterialSkin.MouseState.HOVER;
             this.buttonListar.Name = "buttonListar";
             this.buttonListar.Primary = false;
@@ -172,8 +185,8 @@
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(584, 103);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton1.Location = new System.Drawing.Point(765, 100);
+            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
@@ -181,51 +194,138 @@
             this.materialFlatButton1.TabIndex = 8;
             this.materialFlatButton1.Text = "Listar";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
-            // dataGridView1
+            // gridDataEstruturas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 209);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(734, 244);
-            this.dataGridView1.TabIndex = 9;
+            this.gridDataEstruturas.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gridDataEstruturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridDataEstruturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnsEstrutura,
+            this.columnSequencia});
+            this.gridDataEstruturas.Location = new System.Drawing.Point(14, 198);
+            this.gridDataEstruturas.Name = "gridDataEstruturas";
+            this.gridDataEstruturas.Size = new System.Drawing.Size(596, 244);
+            this.gridDataEstruturas.TabIndex = 9;
             // 
-            // labelExemplo
+            // columnsEstrutura
             // 
-            this.labelExemplo.Depth = 0;
-            this.labelExemplo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.labelExemplo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelExemplo.Location = new System.Drawing.Point(12, 131);
-            this.labelExemplo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labelExemplo.Name = "labelExemplo";
-            this.labelExemplo.Size = new System.Drawing.Size(473, 20);
-            this.labelExemplo.TabIndex = 10;
-            this.labelExemplo.Text = "Obs: inclua os valores separados por \';\'. Exemplo: 1;2;3;4";
+            this.columnsEstrutura.HeaderText = "Estrututa";
+            this.columnsEstrutura.Name = "columnsEstrutura";
+            this.columnsEstrutura.ReadOnly = true;
+            this.columnsEstrutura.Width = 150;
             // 
-            // buttonQuantidade
+            // columnSequencia
             // 
-            this.buttonQuantidade.AutoSize = true;
-            this.buttonQuantidade.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonQuantidade.Depth = 0;
-            this.buttonQuantidade.Location = new System.Drawing.Point(650, 103);
-            this.buttonQuantidade.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.buttonQuantidade.MouseState = MaterialSkin.MouseState.HOVER;
-            this.buttonQuantidade.Name = "buttonQuantidade";
-            this.buttonQuantidade.Primary = false;
-            this.buttonQuantidade.Size = new System.Drawing.Size(96, 36);
-            this.buttonQuantidade.TabIndex = 11;
-            this.buttonQuantidade.Text = "Quantidade";
-            this.buttonQuantidade.UseVisualStyleBackColor = true;
+            this.columnSequencia.HeaderText = "Sequência";
+            this.columnSequencia.Name = "columnSequencia";
+            this.columnSequencia.ReadOnly = true;
+            this.columnSequencia.Width = 400;
+            // 
+            // labelQuantidade
+            // 
+            this.labelQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelQuantidade.Depth = 0;
+            this.labelQuantidade.Font = new System.Drawing.Font("Roboto", 11F);
+            this.labelQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelQuantidade.Location = new System.Drawing.Point(524, 445);
+            this.labelQuantidade.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelQuantidade.Name = "labelQuantidade";
+            this.labelQuantidade.Size = new System.Drawing.Size(86, 31);
+            this.labelQuantidade.TabIndex = 11;
+            this.labelQuantidade.Text = "0";
+            this.labelQuantidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(302, 450);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(184, 19);
+            this.materialLabel2.TabIndex = 12;
+            this.materialLabel2.Text = "Quantidade de Elementos:";
+            // 
+            // materialCheckBox1
+            // 
+            this.materialCheckBox1.Depth = 0;
+            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.materialCheckBox1.Location = new System.Drawing.Point(14, 173);
+            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckBox1.Name = "materialCheckBox1";
+            this.materialCheckBox1.Ripple = true;
+            this.materialCheckBox1.Size = new System.Drawing.Size(210, 22);
+            this.materialCheckBox1.TabIndex = 18;
+            this.materialCheckBox1.Text = "Representação Gráfica";
+            this.materialCheckBox1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::TPFinal_AED_BAR.Properties.Resources.Hashtable3;
+            this.pictureBox5.Location = new System.Drawing.Point(765, 399);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(44, 43);
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::TPFinal_AED_BAR.Properties.Resources.Pilha1;
+            this.pictureBox4.Location = new System.Drawing.Point(709, 348);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::TPFinal_AED_BAR.Properties.Resources.Lista2;
+            this.pictureBox3.Location = new System.Drawing.Point(709, 309);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 33);
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TPFinal_AED_BAR.Properties.Resources.Fila1;
+            this.pictureBox2.Location = new System.Drawing.Point(697, 245);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 45);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TPFinal_AED_BAR.Properties.Resources.Arvore2;
+            this.pictureBox1.Location = new System.Drawing.Point(774, 198);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 43);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // formPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 474);
-            this.Controls.Add(this.buttonQuantidade);
-            this.Controls.Add(this.labelExemplo);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(850, 503);
+            this.Controls.Add(this.materialCheckBox1);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.labelQuantidade);
+            this.Controls.Add(this.gridDataEstruturas);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.buttonListar);
             this.Controls.Add(this.labelSequencia);
@@ -235,9 +335,15 @@
             this.Controls.Add(this.rButtonFila);
             this.Controls.Add(this.rButtonPilha);
             this.Controls.Add(this.TextSequencia);
+            this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "formPrincipal";
             this.Text = "Data Struct Test";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDataEstruturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,9 +360,17 @@
         private MaterialSkin.Controls.MaterialLabel labelSequencia;
         private MaterialSkin.Controls.MaterialFlatButton buttonListar;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private MaterialSkin.Controls.MaterialLabel labelExemplo;
-        private MaterialSkin.Controls.MaterialFlatButton buttonQuantidade;
+        private System.Windows.Forms.DataGridView gridDataEstruturas;
+        private MaterialSkin.Controls.MaterialLabel labelQuantidade;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnsEstrutura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnSequencia;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
     }
 }
 

@@ -4,26 +4,48 @@ using System.Text;
 
 namespace TPFinal_AED_BAR.EstruturasDeDados.Pilha {
     class Pilha {
-        private Celula topo = null;
-        private int quantidade;
+        private CCelula topo = null;
+        private int Qtde = 0;
 
-        public void empilhar(Object item) {
-            if(topo == null)
-                topo = new Celula(item);
-            else
-                topo = new Celula(item, topo.prox);
+        public bool Vazia() {
+            return topo == null;
+        }
 
-            quantidade++;
+        public void empilha(Object ValorItem) {
+            topo = new CCelula(ValorItem, topo);
+            Qtde++;
+        }
+
+        public int Quantidade() { 
+            return Qtde;
+        }
+
+        public CCelula getTopo() {
+            return topo;
         }
 
         public Object desempilhar() {
             Object item = null;
-            item = topo.item;
-            topo = topo.prox;
-            quantidade--;
+            if(topo != null) {
+                item = topo.Item;
+                topo = topo.Prox;
+                Qtde--;
+            }
+
             return item;
         }
 
-        public  
+        public Object[] imprimir() {
+            Object[] itens = new Object[Qtde];
+            int index = 0;
+            if(topo != null) {
+                for(CCelula aux = topo;aux != null;aux = aux.Prox) {
+                    itens[index] = aux.Item;
+                    index++;
+                }
+            }
+
+            return itens;
+        }
     }
 }

@@ -4,7 +4,7 @@ using TPFinal_AED_BAR.EstruturasDeDados.Pilha;
 
 namespace TPFinal_AED_BAR.Tests {
     class PilhaTest {
-        private Pilha pilha;
+        /*private Pilha pilha;
         public PilhaTest() {
             pilha = new Pilha();
         }
@@ -35,6 +35,6 @@ namespace TPFinal_AED_BAR.Tests {
             pilha.imprimir();
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
-        }
+        }*/
     }
 }

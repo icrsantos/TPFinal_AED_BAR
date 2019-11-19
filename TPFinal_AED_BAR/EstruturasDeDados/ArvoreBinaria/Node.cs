@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstruturasArvores {
+namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
     class Node {
 
         #region Atributos de node
