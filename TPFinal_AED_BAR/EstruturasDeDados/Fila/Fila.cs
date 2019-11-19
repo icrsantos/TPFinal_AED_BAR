@@ -27,6 +27,26 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.Fila {
             Qtde++;
         }
 
+        public Object desenfileira() {
+            Object Item = null;
+            if(Frente != Tras) {
+                Frente = Frente.Prox;
+                Item = Frente.Item;
+                Qtde--;
+            }
+            return Item;
+        }
+
+        public bool pesquisa(Object elemento) {
+            bool achou = false;
+            CCelula aux = Frente.Prox;
+            while(aux != null && !achou) {
+                achou = aux.Item.Equals(elemento);
+                aux = aux.Prox;
+            }
+            return achou;
+        }
+
         public int Quantidade() {
             return Qtde;
         }

@@ -1,64 +1,40 @@
 ﻿using System;
 using System.Diagnostics;
-using TPFinal_AED_BAR.EstruturasDeDados;
+using TPFinal_AED_BAR.EstruturasDeDados.Lista;
 
 namespace TPFinal_AED_BAR.Tests {
     class ListaTest {
-       /* private Lista l;
+        private Lista lista;
         public ListaTest() {
-            l = new Lista();
+            lista = new Lista();
         }
 
-        public ListaTest(Lista l) {
-            this.l = l;
-        }
-
-        public double insereInicioTest(Object item) {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            l.insereInicio(item);
-            stopwatch.Stop();
-            return stopwatch.Elapsed.TotalMilliseconds;
+        public ListaTest(Lista lista) {
+            this.lista = lista;
         }
 
         public double insereFimTest(Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            l.insereFim(item);
+            lista.InsereFim(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double inserePosicaoTest(Object item) {
+        public double removeTest(Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            l.inserePosicao(item);
+            lista.Remove(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double removeTest() {
+        public double pesquisaTest(Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            l.remove();
+            lista.pesquisa(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
-
-        public double removeItemTest(Object item) {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            l.remove(item);
-            stopwatch.Stop();
-            return stopwatch.Elapsed.TotalMilliseconds;
-        }
-
-        public double getPosicaoTest(Object item) {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            l.getItem(item);
-            stopwatch.Stop();
-            return stopwatch.Elapsed.TotalMilliseconds;
-        }*/
     }
 }

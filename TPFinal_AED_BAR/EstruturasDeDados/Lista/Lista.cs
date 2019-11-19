@@ -23,6 +23,32 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.Lista {
             Qtde++;
         }
 
+        public void Remove(Object ValorItem) {
+            if(Primeira != Ultima) {
+                CCelula aux = Primeira;
+                bool achou = false;
+                while(aux.Prox != null && !achou) {
+                    achou = aux.Prox.Item.Equals(ValorItem);
+                    if(!achou)
+                        aux = aux.Prox;
+                }
+
+                if(achou) {
+                    aux.Prox = aux.Prox.Prox;
+                    if(aux.Prox == null)
+                        Ultima = aux;
+                    Qtde--;
+                }
+            }
+        }
+
+        public bool pesquisa(Object elemento) {
+            bool achou = false;
+            for(CCelula aux = Primeira.Prox;aux != null && !achou;aux = aux.Prox)
+                achou = aux.Item.Equals(elemento);
+            return achou;
+        }
+
         public Object[] imprimir() {
             Object[] itens = new Object[Qtde];
             int index = 0;

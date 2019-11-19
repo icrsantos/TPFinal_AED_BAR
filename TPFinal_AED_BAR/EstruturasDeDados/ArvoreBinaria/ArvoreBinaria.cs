@@ -204,13 +204,18 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
         #endregion
 
         #region Método para informar se existe o elemento passado por parâmetro na árvore
+
+        public bool pesquisar(int item) {
+            return ContemOElementoNaArvore(item, raiz);
+        }
+
         /// <summary>
         /// Retorna um boolean pra informar se um elemento existe na árvore binária. 
         /// </summary>
         /// <param name="item"></param>
         /// <param name="esteNode"></param>
         /// <returns></returns>
-        public bool ContemOElementoNaArvore(int item, Node esteNode) {
+        private bool ContemOElementoNaArvore(int item, Node esteNode) {
             
             //Significa que a árvore está vazia
             if (esteNode == null)

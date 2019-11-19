@@ -35,6 +35,16 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.Pilha {
             return item;
         }
 
+        public bool pesquisa(Object item) {
+            bool achou = false;
+            CCelula aux = topo;
+            while(aux != null && !achou) {
+                achou = aux.Item.Equals(item);
+                aux = aux.Prox;
+            }
+            return achou;
+        }
+
         public Object[] imprimir() {
             Object[] itens = new Object[Qtde];
             int index = 0;

@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Diagnostics;
-using TPFinal_AED_BAR.EstruturasDeDados;
+using TPFinal_AED_BAR.EstruturasDeDados.Fila;
 
 namespace TPFinal_AED_BAR.Tests {
     class FilaTest {
-       /* private Fila f;
+        private Fila fila;
         public FilaTest() {
-            f = new Fila();
+            fila = new Fila();
         }
 
-        public FilaTest(Fila f) {
-            this.f = f;
+        public FilaTest(Fila fila) {
+            this.fila = fila;
         }
 
         public double enfileiraTest(Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            f.enfileira(item);
+            fila.enfileira(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
@@ -24,7 +24,7 @@ namespace TPFinal_AED_BAR.Tests {
         public double denfileiraTest() {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            f.denfileira();
+            fila.desenfileira();
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
@@ -32,9 +32,9 @@ namespace TPFinal_AED_BAR.Tests {
         public double getPosicaoTest(Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            f.getItem(item);
+            fila.pesquisa(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
-        }*/
+        }
     }
 }

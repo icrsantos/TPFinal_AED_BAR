@@ -31,6 +31,11 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.Hash {
             return ( (ListaHash) ( tabela[posicao] ) ).pesquisar(item);
         }
 
+        public void remove(int chave, Object item) {
+            int posicao = hash(chave);
+            ( (ListaHash) ( tabela[posicao] ) ).Remove(item);
+        }
+
         public void inserir(int chave, Object Item) {
             if(chave < tamanhoTbl) {
                 int posicao = hash(chave);

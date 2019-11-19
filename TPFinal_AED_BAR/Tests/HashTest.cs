@@ -1,40 +1,40 @@
 ﻿using System;
 using System.Diagnostics;
-using TPFinal_AED_BAR.EstruturasDeDados;
+using TPFinal_AED_BAR.EstruturasDeDados.Hash;
 
 namespace TPFinal_AED_BAR.Tests {
     class HashTest {
-       /* private Hash h;
+        private Hash hash;
         public HashTest() {
-            h = new Hash();
+            hash = new Hash();
         }
 
-        public HashTest(Hash h) {
-            this.h = h;
+        public HashTest(Hash hash) {
+            this.hash = hash;
         }
 
         public double insereTest(int chave, Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            h.insere(chave, item);
+            hash.inserir(chave, item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double removeTest(int chave) {
+        public double removeTest(int chave, Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            h.remove(chave);
+            hash.remove(chave, item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double pesquisaTest(int chave) {
+        public double pesquisaTest(int chave, Object item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            h.pesquisa(chave);
+            hash.pesquisa(chave, item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
-        }*/
+        }
     }
 }

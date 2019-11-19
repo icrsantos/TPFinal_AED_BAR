@@ -1,56 +1,40 @@
 ﻿using System;
 using System.Diagnostics;
-using TPFinal_AED_BAR.EstruturasDeDados;
+using TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria;
 
 namespace TPFinal_AED_BAR.Tests {
     class ArvoreTest {
-    /*    private Arvore a;
+        private ArvoreBinaria arvore;
         public ArvoreTest() {
-            a = new Arvore();
+            arvore = new ArvoreBinaria();
         }
 
-        public ArvoreTest(Arvore a) {
-            this.a = a;
+        public ArvoreTest(ArvoreBinaria arvore) {
+            this.arvore = arvore;
         }
 
-        public double insereTest(Object item) {
+        public double insereTest(int item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            a.insere(item);
+            arvore.InsereNode(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double insereBalanceadoTest(Object item) {
+        public double removeTest(int item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            a.insereBalanceado(item);
+            arvore.Remove(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
 
-        public double removeTest(Object item) {
+        public double pesquisaTest(int item) {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            a.remove(item);
+            arvore.pesquisar(item);
             stopwatch.Stop();
             return stopwatch.Elapsed.TotalMilliseconds;
         }
-
-        public double removeBalanceadoTest(Object item) {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            a.removeBalanceado(item);
-            stopwatch.Stop();
-            return stopwatch.Elapsed.TotalMilliseconds;
-        }
-
-        public double pesquisaTest(Object item) {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            a.pesquisa(item);
-            stopwatch.Stop();
-            return stopwatch.Elapsed.TotalMilliseconds;
-        }*/
     }
 }
