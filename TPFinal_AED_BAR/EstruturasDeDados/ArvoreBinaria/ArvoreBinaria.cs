@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstruturasArvores {
+namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
     class ArvoreBinaria {
 
         #region Atributos da classe
@@ -386,6 +386,24 @@ namespace EstruturasArvores {
         }
         #endregion
 
+        public Object[] imprimir() {
+            String sequencia = "";
+            imprimir(raiz, ref sequencia);
+            return (Object[]) sequencia.Split(';');
+        }
+
+        private void imprimir(Node node, ref String sequencia) {
+            if(raiz != null) {
+                if(node.esq != null)
+                    imprimir(node.esq, ref sequencia);
+               
+               sequencia += node.item.ToString() + ";";
+
+                if(node.dir != null)
+                    imprimir(node.dir, ref sequencia);
+            }
+        }
+
         //ERRADO
         #region Calcular a altura da árvore binária a partir de um nodo específico
         /// <summary>
@@ -475,10 +493,5 @@ namespace EstruturasArvores {
             return 0;
         }
         #endregion
-
-        
-       
-        
-
-    }//Fim classe
-}//fim namespace
+    }
+}
