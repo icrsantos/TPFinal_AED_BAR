@@ -32,44 +32,49 @@
             this.buttonListar = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.gridDataEstruturas = new System.Windows.Forms.DataGridView();
+            this.columnsEstrutura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnSequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelQuantidade = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.buttonRelatorioTest = new MaterialSkin.Controls.MaterialFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonRelatorioTest = new MaterialSkin.Controls.MaterialFlatButton();
-            this.columnsEstrutura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnSequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridDataEstruturas)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TextSequencia
             // 
             this.TextSequencia.Depth = 0;
             this.TextSequencia.Hint = "Inclua os valores separados por \';\'. Exemplo: 1;2;3;4";
-            this.TextSequencia.Location = new System.Drawing.Point(40, 108);
+            this.TextSequencia.Location = new System.Drawing.Point(204, 93);
             this.TextSequencia.MouseState = MaterialSkin.MouseState.HOVER;
             this.TextSequencia.Name = "TextSequencia";
             this.TextSequencia.PasswordChar = '\0';
             this.TextSequencia.SelectedText = "";
             this.TextSequencia.SelectionLength = 0;
             this.TextSequencia.SelectionStart = 0;
-            this.TextSequencia.Size = new System.Drawing.Size(555, 23);
+            this.TextSequencia.Size = new System.Drawing.Size(596, 23);
             this.TextSequencia.TabIndex = 0;
             this.TextSequencia.UseSystemPasswordChar = false;
             // 
             // rButtonPilha
             // 
             this.rButtonPilha.Depth = 0;
-            this.rButtonPilha.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonPilha.Location = new System.Drawing.Point(705, 393);
+            this.rButtonPilha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rButtonPilha.Location = new System.Drawing.Point(65, 264);
             this.rButtonPilha.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonPilha.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonPilha.MouseState = MaterialSkin.MouseState.HOVER;
@@ -85,8 +90,8 @@
             // rButtonFila
             // 
             this.rButtonFila.Depth = 0;
-            this.rButtonFila.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonFila.Location = new System.Drawing.Point(705, 268);
+            this.rButtonFila.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rButtonFila.Location = new System.Drawing.Point(65, 139);
             this.rButtonFila.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonFila.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonFila.MouseState = MaterialSkin.MouseState.HOVER;
@@ -102,8 +107,8 @@
             // rButtonLista
             // 
             this.rButtonLista.Depth = 0;
-            this.rButtonLista.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonLista.Location = new System.Drawing.Point(705, 332);
+            this.rButtonLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rButtonLista.Location = new System.Drawing.Point(65, 203);
             this.rButtonLista.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonLista.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonLista.MouseState = MaterialSkin.MouseState.HOVER;
@@ -119,8 +124,9 @@
             // rButtonArvore
             // 
             this.rButtonArvore.Depth = 0;
-            this.rButtonArvore.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonArvore.Location = new System.Drawing.Point(705, 202);
+            this.rButtonArvore.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rButtonArvore.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.rButtonArvore.Location = new System.Drawing.Point(65, 75);
             this.rButtonArvore.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonArvore.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonArvore.MouseState = MaterialSkin.MouseState.HOVER;
@@ -136,8 +142,8 @@
             // rButtonHash
             // 
             this.rButtonHash.Depth = 0;
-            this.rButtonHash.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rButtonHash.Location = new System.Drawing.Point(705, 444);
+            this.rButtonHash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rButtonHash.Location = new System.Drawing.Point(65, 325);
             this.rButtonHash.Margin = new System.Windows.Forms.Padding(0);
             this.rButtonHash.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rButtonHash.MouseState = MaterialSkin.MouseState.HOVER;
@@ -155,14 +161,14 @@
             this.buttonListar.AutoSize = true;
             this.buttonListar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonListar.Depth = 0;
-            this.buttonListar.Location = new System.Drawing.Point(612, 95);
+            this.buttonListar.Location = new System.Drawing.Point(533, 125);
             this.buttonListar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonListar.MouseState = MaterialSkin.MouseState.HOVER;
             this.buttonListar.Name = "buttonListar";
             this.buttonListar.Primary = false;
-            this.buttonListar.Size = new System.Drawing.Size(161, 36);
+            this.buttonListar.Size = new System.Drawing.Size(140, 36);
             this.buttonListar.TabIndex = 7;
-            this.buttonListar.Text = "Adicionar Sequência";
+            this.buttonListar.Text = "Inserir Sequência";
             this.buttonListar.UseVisualStyleBackColor = true;
             this.buttonListar.Click += new System.EventHandler(this.buttonListar_Click);
             // 
@@ -171,7 +177,7 @@
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(792, 95);
+            this.materialFlatButton1.Location = new System.Drawing.Point(699, 125);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -184,103 +190,19 @@
             // 
             // gridDataEstruturas
             // 
-            this.gridDataEstruturas.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gridDataEstruturas.AllowUserToAddRows = false;
+            this.gridDataEstruturas.AllowUserToDeleteRows = false;
+            this.gridDataEstruturas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(120)))));
             this.gridDataEstruturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDataEstruturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnsEstrutura,
             this.columnSequencia});
-            this.gridDataEstruturas.Location = new System.Drawing.Point(40, 181);
+            this.gridDataEstruturas.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.gridDataEstruturas.Location = new System.Drawing.Point(209, 180);
             this.gridDataEstruturas.Name = "gridDataEstruturas";
+            this.gridDataEstruturas.ReadOnly = true;
             this.gridDataEstruturas.Size = new System.Drawing.Size(596, 244);
             this.gridDataEstruturas.TabIndex = 9;
-            // 
-            // labelQuantidade
-            // 
-            this.labelQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelQuantidade.Depth = 0;
-            this.labelQuantidade.Font = new System.Drawing.Font("Roboto", 11F);
-            this.labelQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelQuantidade.Location = new System.Drawing.Point(550, 444);
-            this.labelQuantidade.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labelQuantidade.Name = "labelQuantidade";
-            this.labelQuantidade.Size = new System.Drawing.Size(86, 31);
-            this.labelQuantidade.TabIndex = 11;
-            this.labelQuantidade.Text = "0";
-            this.labelQuantidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(456, 450);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(88, 19);
-            this.materialLabel2.TabIndex = 12;
-            this.materialLabel2.Text = "Quantidade:";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::TPFinal_AED_BAR.Properties.Resources.Hashtable3;
-            this.pictureBox5.Location = new System.Drawing.Point(834, 426);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(44, 43);
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::TPFinal_AED_BAR.Properties.Resources.Pilha1;
-            this.pictureBox4.Location = new System.Drawing.Point(778, 371);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 44);
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TPFinal_AED_BAR.Properties.Resources.Lista2;
-            this.pictureBox3.Location = new System.Drawing.Point(770, 315);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 39);
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TPFinal_AED_BAR.Properties.Resources.Fila1;
-            this.pictureBox2.Location = new System.Drawing.Point(766, 245);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 45);
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TPFinal_AED_BAR.Properties.Resources.Arvore2;
-            this.pictureBox1.Location = new System.Drawing.Point(834, 181);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 43);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // buttonRelatorioTest
-            // 
-            this.buttonRelatorioTest.AutoSize = true;
-            this.buttonRelatorioTest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonRelatorioTest.Depth = 0;
-            this.buttonRelatorioTest.Location = new System.Drawing.Point(40, 444);
-            this.buttonRelatorioTest.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.buttonRelatorioTest.MouseState = MaterialSkin.MouseState.HOVER;
-            this.buttonRelatorioTest.Name = "buttonRelatorioTest";
-            this.buttonRelatorioTest.Primary = false;
-            this.buttonRelatorioTest.Size = new System.Drawing.Size(195, 36);
-            this.buttonRelatorioTest.TabIndex = 19;
-            this.buttonRelatorioTest.Text = "Gerar Relatório de Teste";
-            this.buttonRelatorioTest.UseVisualStyleBackColor = true;
-            this.buttonRelatorioTest.Click += new System.EventHandler(this.buttonRelatorioTest_Click);
             // 
             // columnsEstrutura
             // 
@@ -296,37 +218,162 @@
             this.columnSequencia.ReadOnly = true;
             this.columnSequencia.Width = 400;
             // 
+            // labelQuantidade
+            // 
+            this.labelQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelQuantidade.Depth = 0;
+            this.labelQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelQuantidade.Location = new System.Drawing.Point(701, 442);
+            this.labelQuantidade.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelQuantidade.Name = "labelQuantidade";
+            this.labelQuantidade.Size = new System.Drawing.Size(86, 31);
+            this.labelQuantidade.TabIndex = 11;
+            this.labelQuantidade.Text = "0";
+            this.labelQuantidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(607, 448);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(87, 18);
+            this.materialLabel2.TabIndex = 12;
+            this.materialLabel2.Text = "Quantidade:";
+            // 
+            // buttonRelatorioTest
+            // 
+            this.buttonRelatorioTest.AutoSize = true;
+            this.buttonRelatorioTest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonRelatorioTest.Depth = 0;
+            this.buttonRelatorioTest.Location = new System.Drawing.Point(209, 442);
+            this.buttonRelatorioTest.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonRelatorioTest.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonRelatorioTest.Name = "buttonRelatorioTest";
+            this.buttonRelatorioTest.Primary = false;
+            this.buttonRelatorioTest.Size = new System.Drawing.Size(131, 36);
+            this.buttonRelatorioTest.TabIndex = 19;
+            this.buttonRelatorioTest.Text = "Gerar Relatório";
+            this.buttonRelatorioTest.UseVisualStyleBackColor = true;
+            this.buttonRelatorioTest.Click += new System.EventHandler(this.buttonRelatorioTest_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(120)))));
+            this.panel1.Controls.Add(this.rButtonArvore);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.rButtonPilha);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.rButtonFila);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.rButtonLista);
+            this.panel1.Controls.Add(this.rButtonHash);
+            this.panel1.Location = new System.Drawing.Point(-2, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(187, 459);
+            this.panel1.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(120)))));
+            this.panel3.Location = new System.Drawing.Point(185, 505);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(861, 18);
+            this.panel3.TabIndex = 22;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(120)))));
+            this.panel4.Location = new System.Drawing.Point(844, 64);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(17, 457);
+            this.panel4.TabIndex = 23;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(35)))), ((int)(((byte)(120)))));
+            this.panel5.Location = new System.Drawing.Point(1, 58);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(861, 18);
+            this.panel5.TabIndex = 23;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TPFinal_AED_BAR.Properties.Resources.Arvore2BRANCO;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 43);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::TPFinal_AED_BAR.Properties.Resources.Hashtable3BRANCO;
+            this.pictureBox5.Location = new System.Drawing.Point(13, 302);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(49, 47);
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::TPFinal_AED_BAR.Properties.Resources.Pilha1BRANCO;
+            this.pictureBox4.Location = new System.Drawing.Point(13, 241);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(49, 45);
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TPFinal_AED_BAR.Properties.Resources.Lista2BRANCO;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 182);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(49, 43);
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TPFinal_AED_BAR.Properties.Resources.Fila1BRANCO;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 116);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 45);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
             // formPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 521);
+            this.ClientSize = new System.Drawing.Size(861, 522);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonRelatorioTest);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.labelQuantidade);
             this.Controls.Add(this.gridDataEstruturas);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.buttonListar);
-            this.Controls.Add(this.rButtonHash);
-            this.Controls.Add(this.rButtonArvore);
-            this.Controls.Add(this.rButtonLista);
-            this.Controls.Add(this.rButtonFila);
-            this.Controls.Add(this.rButtonPilha);
             this.Controls.Add(this.TextSequencia);
-            this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "formPrincipal";
             this.Text = "Manipulador de Estruturas de Dados";
             ((System.ComponentModel.ISupportInitialize)(this.gridDataEstruturas)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,6 +400,10 @@
         private MaterialSkin.Controls.MaterialFlatButton buttonRelatorioTest;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnsEstrutura;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnSequencia;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

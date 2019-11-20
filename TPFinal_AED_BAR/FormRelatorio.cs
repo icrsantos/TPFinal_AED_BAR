@@ -18,7 +18,7 @@ namespace TPFinal_AED_BAR {
         private void FormRelatorio_Load(object sender, EventArgs e) {
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
 
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Indigo800, Primary.Indigo700,
@@ -33,8 +33,12 @@ namespace TPFinal_AED_BAR {
             fprincipal.ShowDialog();
         }
 
-        public void mostraRelatorio(String relatorio) {
-            materialLabel1.Text = relatorio;
+        public void mostraRelatorio(SortedList<String, String> relatorio) {
+            labelArvore.Text = relatorio["ARVORE"];
+            labelFila.Text = relatorio["FILA"];
+            labelPilha.Text = relatorio["PILHA"];
+            labellista.Text = relatorio["LISTA"];
+            labelHash.Text = relatorio["HASH"];
         }
     }
 }

@@ -29,7 +29,7 @@ namespace TPFinal_AED_BAR {
 
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
 
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Indigo800, Primary.Indigo700,
@@ -166,6 +166,7 @@ namespace TPFinal_AED_BAR {
             if(tpEstrutura == null) {
                 MessageBox.Show("Operação bloqueada!\n\nSelecione o tipo de estrutura que deseja trabalhar.");
             } else {
+                gridDataEstruturas.Rows.Clear();
                 switch(tpEstrutura) {
                     case "FILA":
                         labelQuantidade.Text = fila.Quantidade().ToString();

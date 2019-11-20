@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TPFinal_AED_BAR.Tests {
     static class Relatorio {
-        public static String gerarRelatorio(String[] sequencia) {
-            String StrPilha = "\tResultados dos testes em Pilha";
-            String StrFila = "\tResultado dos testes em Fila";
-            String StrArvore = "\tResultado dos testes em Arvore";
-            String StrHash = "\tResultado dos testes em Hash";
-            String StrLista = "\tResultado dos testes em Lista";
+        public static SortedList<String, String> gerarRelatorio(String[] sequencia) {
+            String StrPilha = "";
+            String StrFila = "";
+            String StrArvore = "";
+            String StrHash = "";
+            String StrLista = "";
 
             Double vrTimePilha = 0;
             Double vrTimeFila = 0;
@@ -33,32 +33,34 @@ namespace TPFinal_AED_BAR.Tests {
                 vrTimeLista += hashT.insereTest(1, sequencia[i]);
             }
 
-            StrPilha += "\nInserção da Sequência(ms): " + vrTimePilha
-                       + "\nDeleção de um elemento; " + pilhaT.dempilhaTest()
-                       + "\nPesquisa de um elemento: " + pilhaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
+            StrPilha += "\nTempo de Inserção(ms): " + vrTimePilha
+                       + "\nTempo de Deleção(ms): " + pilhaT.dempilhaTest()
+                       + "\nTempo de Pesquisa(ms): " + pilhaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
 
             StrFila += "\nInserção da Sequência(ms): " + vrTimeFila
-                       + "\nDeleção de um elemento; " + filaT.denfileiraTest()
-                       + "\nPesquisa de um elemento: " + filaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
+                       + "\nTempo de Deleção(ms): " + filaT.denfileiraTest()
+                       + "\nTempo de Pesquisa(ms): " + filaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
 
             StrArvore += "\nInserção da Sequência(ms): " + vrTimeArvore
-                        + "\nDeleção de um elemento; " + arvoreT.removeTest(int.Parse(sequencia[(int) sequencia.Length - 1]))
-                        + "\nPesquisa de um elemento: " + arvoreT.pesquisaTest(int.Parse(sequencia[(int) sequencia.Length / 2]));
+                        + "\nTempo de Deleção(ms): " + arvoreT.removeTest(int.Parse(sequencia[(int) sequencia.Length - 1]))
+                        + "\nTempo de Pesquisa(ms): " + arvoreT.pesquisaTest(int.Parse(sequencia[(int) sequencia.Length / 2]));
 
             StrHash += "\nInserção da Sequência(ms): " + vrTimeHash
-                        + "\nDeleção de um elemento; " + hashT.removeTest(1, sequencia[(int) sequencia.Length - 1])
-                        + "\nPesquisa de um elemento: " + hashT.pesquisaTest(1, sequencia[(int) sequencia.Length / 2]);
+                        + "\nTempo de Deleção(ms): " + hashT.removeTest(1, sequencia[(int) sequencia.Length - 1])
+                        + "\nTempo de Pesquisa(ms): " + hashT.pesquisaTest(1, sequencia[(int) sequencia.Length / 2]);
 
             StrLista += "\nInserção da Sequência(ms): " + vrTimeLista
-                       + "\nDeleção de um elemento; " + listaT.removeTest(sequencia[(int) sequencia.Length - 1])
-                       + "\nPesquisa de um elemento: " + listaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
+                       + "\nTempo de Deleção(ms): " + listaT.removeTest(sequencia[(int) sequencia.Length - 1])
+                       + "\nTempo de Pesquisa(ms): " + listaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
 
-            return (StrPilha
-                + "\n\n\t**********************************\n\n" + StrFila
-                + "\n\n\t**********************************\n\n" + StrArvore
-                + "\n\n\t**********************************\n\n" + StrHash
-                + "\n\n\t**********************************\n\n" + StrLista
-                + "\n\n");
+            SortedList<String, String> relatorio = new SortedList<String, String>();
+            relatorio.Add("PILHA", StrPilha);
+            relatorio.Add("FILA", StrFila);
+            relatorio.Add("ARVORE", StrArvore);
+            relatorio.Add("LISTA", StrLista);
+            relatorio.Add("HASH", StrHash);
+
+            return relatorio;
         }
     }
 }

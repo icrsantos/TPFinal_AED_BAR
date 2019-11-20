@@ -63,9 +63,9 @@ namespace TPFinal_AED_BAR.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Arvore2 {
+        internal static System.Drawing.Bitmap Arvore2BRANCO {
             get {
-                object obj = ResourceManager.GetObject("Arvore2", resourceCulture);
+                object obj = ResourceManager.GetObject("Arvore2BRANCO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace TPFinal_AED_BAR.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fila1 {
+        internal static System.Drawing.Bitmap Fila1BRANCO {
             get {
-                object obj = ResourceManager.GetObject("Fila1", resourceCulture);
+                object obj = ResourceManager.GetObject("Fila1BRANCO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace TPFinal_AED_BAR.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hashtable3 {
+        internal static System.Drawing.Bitmap Hashtable3BRANCO {
             get {
-                object obj = ResourceManager.GetObject("Hashtable3", resourceCulture);
+                object obj = ResourceManager.GetObject("Hashtable3BRANCO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace TPFinal_AED_BAR.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Lista2 {
+        internal static System.Drawing.Bitmap Lista2BRANCO {
             get {
-                object obj = ResourceManager.GetObject("Lista2", resourceCulture);
+                object obj = ResourceManager.GetObject("Lista2BRANCO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace TPFinal_AED_BAR.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pilha1 {
+        internal static System.Drawing.Bitmap Pilha1BRANCO {
             get {
-                object obj = ResourceManager.GetObject("Pilha1", resourceCulture);
+                object obj = ResourceManager.GetObject("Pilha1BRANCO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

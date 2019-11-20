@@ -394,7 +394,7 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
         public Object[] imprimir() {
             String sequencia = "";
             imprimir(raiz, ref sequencia);
-            return (Object[]) sequencia.Split(';');
+            return sequencia != "" ? (Object[]) sequencia.Split(';') : new Object[0];
         }
 
         private void imprimir(Node node, ref String sequencia) {

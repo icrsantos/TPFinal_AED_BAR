@@ -76,6 +76,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tests\ArvoreTest.cs" />
     <Compile Include="Tests\FilaTest.cs" />
     <Compile Include="Tests\HashTest.cs" />
@@ -90,14 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -113,19 +113,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Arvore2.png" />
+    <None Include="Resources\Fila1BRANCO.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fila1.png" />
+    <None Include="Resources\Hashtable3BRANCO.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Lista2.png" />
+    <None Include="Resources\Lista2BRANCO.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Pilha1.png" />
+    <None Include="Resources\Pilha1BRANCO.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Hashtable3.png" />
+    <None Include="Resources\Arvore2BRANCO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
