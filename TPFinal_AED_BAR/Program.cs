@@ -14,6 +14,7 @@ namespace TPFinal_AED_BAR {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new formPrincipal());
+            //.
         }
     }
 }
