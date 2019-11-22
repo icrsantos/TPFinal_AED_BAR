@@ -17,6 +17,11 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.Hash {
             this.preencheTabela();
         }
 
+        public bool Vazia(int chave) {
+            int posicao = hash(chave);
+            return tabela[posicao].Vazia();
+        }
+
         private void preencheTabela() {
             for(int i = 0;i < tamanhoTbl;i++)
                 tabela[i] = new ListaHash();
