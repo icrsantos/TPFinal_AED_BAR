@@ -7,20 +7,12 @@ using System.Threading.Tasks;
 namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
     class ArvoreBinaria {
 
-        #region Atributos da classe
         Node raiz;
-        int qtde=0;//Quantidade de nodos existentes na árvore
-        int altura = 0;
-        #endregion
+        int qtde=0;
 
-        #region Contrutora default
-        /// <summary>
-        /// Aloca a raiz da árvore criando um nodo null e aponta as referências "pai", "esquerda" e "direita" para null. 
-        /// </summary>
         public ArvoreBinaria() {
-            raiz =null;
+            raiz = null;
         }
-        #endregion
 
         #region Retorna a raiz da árvore
         /// <summary>
@@ -74,7 +66,6 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
                     Remove(valorItem, esteNode.dir);
                 else {
 
-                    //QUANDO ESTE NODE NÃO TIVER FILHOS
                     if (esteNode.dir == null && esteNode.esq == null) {
                         if (valorItem < (int)esteNode.pai.item)
                             esteNode.pai.esq = null;
@@ -82,10 +73,8 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
                             esteNode.pai.dir = null;
                         this.qtde--;
                     }
-                    //QUANDO ESTE NODE TIVER SÓ 1 FILHO
-                    //PELA ESQUERDA
+
                     else if (esteNode.dir == null && esteNode.esq != null) {
-                        //trocar o elemento removido pelo único filho dele
                         if (valorItem > (int)esteNode.pai.item) {
                             esteNode.esq.pai = esteNode.pai;
                             esteNode.pai.dir = esteNode.esq;
@@ -94,10 +83,8 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
                             esteNode.pai.esq = esteNode.esq;
                         }
                         this.qtde--;
-                        //PELA DIREITA
                     } else if (esteNode.dir != null && esteNode.esq == null) {
-                        //trocar o elemento removido pelo único filho dele
-                        if (valorItem > (int)esteNode.pai.item) {
+                        if (valorItem > (int) esteNode.pai.item) {
                             esteNode.dir.pai = esteNode.pai;
                             esteNode.pai.dir = esteNode.dir;
                         } else {
@@ -105,29 +92,23 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
                             esteNode.pai.esq = esteNode.dir;
                         }
                         this.qtde--;
-                        //QUANDO ESTE NODE TIVER 2 FILHOS
                     } else {
-                        //Obter o elemento extremo invertido ao lado da subárvore
                         Node aux = ElementoMaisAEsquerda(esteNode.dir);
 
                         if (valorItem > (int)esteNode.pai.item) {
                             
-                            //Mudar as referências do elemento anterior
                             if ((int)aux.item > (int)aux.pai.item)
                                 aux.pai.dir = esteNode.dir.dir;
                             else
                                 aux.pai.esq = esteNode.esq.esq;
 
-                            //Atualizar o valor do node a ser removido para manter a coerência da arvore binária
                             esteNode.item = aux.item;
 
                         } else {
-                            //Mudar as referências do elemento anterior
                             if ((int)aux.item > (int)aux.pai.item)
                                 aux.pai.dir = null;
                             else
                                 aux.pai.esq = null;
-                            //Atualizar o valor do node a ser removido para manter a coerência da arvore binária
                             esteNode.item = aux.item;
                         }
                         this.qtde--;
@@ -394,7 +375,7 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
         public Object[] imprimir() {
             String sequencia = "";
             imprimir(raiz, ref sequencia);
-            return sequencia != "" ? (Object[]) sequencia.Split(';') : new Object[0];
+            return sequencia != "" ? (Object[]) sequencia.Split(';') : null;
         }
 
         private void imprimir(Node node, ref String sequencia) {
@@ -409,7 +390,10 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
             }
         }
 
-        //ERRADO
+        public bool Vazia() {
+            return this.raiz == null;
+        }
+
         #region Calcular a altura da árvore binária a partir de um nodo específico
         /// <summary>
         /// Retorna a altura da arvore binária a partir de um nodo passado por parâmetro

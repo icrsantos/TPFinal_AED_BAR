@@ -37,19 +37,19 @@ namespace TPFinal_AED_BAR.Tests {
                        + "\nTempo de Deleção(ms): " + pilhaT.dempilhaTest()
                        + "\nTempo de Pesquisa(ms): " + pilhaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
 
-            StrFila += "\nInserção da Sequência(ms): " + vrTimeFila
+            StrFila += "\nTempo de Inserção(ms): " + vrTimeFila
                        + "\nTempo de Deleção(ms): " + filaT.denfileiraTest()
                        + "\nTempo de Pesquisa(ms): " + filaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
 
-            StrArvore += "\nInserção da Sequência(ms): " + vrTimeArvore
+            StrArvore += "\nTempo de Inserção(ms): " + vrTimeArvore
                         + "\nTempo de Deleção(ms): " + arvoreT.removeTest(int.Parse(sequencia[(int) sequencia.Length - 1]))
                         + "\nTempo de Pesquisa(ms): " + arvoreT.pesquisaTest(int.Parse(sequencia[(int) sequencia.Length / 2]));
 
-            StrHash += "\nInserção da Sequência(ms): " + vrTimeHash
+            StrHash += "\nTempo de Inserção(ms): " + vrTimeHash
                         + "\nTempo de Deleção(ms): " + hashT.removeTest(1, sequencia[(int) sequencia.Length - 1])
                         + "\nTempo de Pesquisa(ms): " + hashT.pesquisaTest(1, sequencia[(int) sequencia.Length / 2]);
 
-            StrLista += "\nInserção da Sequência(ms): " + vrTimeLista
+            StrLista += "\nTempo de Inserção(ms): " + vrTimeLista
                        + "\nTempo de Deleção(ms): " + listaT.removeTest(sequencia[(int) sequencia.Length - 1])
                        + "\nTempo de Pesquisa(ms): " + listaT.pesquisaTest(sequencia[(int) sequencia.Length / 2]);
 
