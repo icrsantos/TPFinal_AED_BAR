@@ -58,24 +58,62 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
         #endregion
         #region CLASSE PRIVADA para fazer a remoção dos elementos da árvore binária
         private void Remove(int valorItem, Node esteNode) {
-            if (esteNode != null) {
+            if(esteNode != null) {
 
-                if (valorItem < (int)esteNode.item)
+                if(valorItem < (int) esteNode.item)
                     Remove(valorItem, esteNode.esq);
-                else if (valorItem > (int)esteNode.item)
+                else if(valorItem > (int) esteNode.item)
                     Remove(valorItem, esteNode.dir);
                 else {
 
-                    if (esteNode.dir == null && esteNode.esq == null) {
-                        if (valorItem < (int)esteNode.pai.item)
+                    //TRATANDO A REMOÇÃO DA RAIZ
+                    if(esteNode.pai == null) {
+                        if(esteNode.esq == null) {
+                            raiz = ElementoMaisAEsquerda(raiz.dir);
+                            esteNode.dir.pai = esteNode.pai;
+
+                        }
+                        if(esteNode.dir == null) {
+                            raiz = ElementoMaisADireita(raiz.esq);
+                            esteNode.esq.pai = esteNode.pai;
+
+                        }
+                        if(esteNode.dir == null && esteNode.esq == null)
+                            raiz = null;
+                        if(esteNode.dir != null && esteNode.esq != null) {
+                            raiz = ElementoMaisAEsquerda(raiz.dir);
+                            if(raiz.pai.pai != null) {
+                                raiz.pai.esq = raiz.dir;
+                                raiz.pai = esteNode.pai;
+                                raiz.dir = esteNode.dir;
+                                raiz.esq = esteNode.esq;
+                                esteNode.dir.pai = raiz;
+                                esteNode.esq.pai = raiz;
+                            } else {
+                                raiz.esq = esteNode.esq;
+                                raiz.pai = esteNode.pai;
+                                esteNode.esq.pai = raiz;
+                            }
+
+
+                        }
+                        this.qtde--;
+                        return;
+                    }
+
+                    //QUANDO ESTE NODE NÃO TIVER FILHOS
+                    if(esteNode.dir == null && esteNode.esq == null) {
+                        if(valorItem < (int) esteNode.pai.item)
                             esteNode.pai.esq = null;
                         else
                             esteNode.pai.dir = null;
                         this.qtde--;
                     }
-
-                    else if (esteNode.dir == null && esteNode.esq != null) {
-                        if (valorItem > (int)esteNode.pai.item) {
+                    //QUANDO ESTE NODE TIVER SÓ 1 FILHO
+                    //PELA ESQUERDA
+                    else if(esteNode.dir == null && esteNode.esq != null) {
+                        //trocar o elemento removido pelo único filho dele
+                        if(valorItem > (int) esteNode.pai.item) {
                             esteNode.esq.pai = esteNode.pai;
                             esteNode.pai.dir = esteNode.esq;
                         } else {
@@ -83,8 +121,10 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
                             esteNode.pai.esq = esteNode.esq;
                         }
                         this.qtde--;
-                    } else if (esteNode.dir != null && esteNode.esq == null) {
-                        if (valorItem > (int) esteNode.pai.item) {
+                        //PELA DIREITA
+                    } else if(esteNode.dir != null && esteNode.esq == null) {
+                        //trocar o elemento removido pelo único filho dele
+                        if(valorItem > (int) esteNode.pai.item) {
                             esteNode.dir.pai = esteNode.pai;
                             esteNode.pai.dir = esteNode.dir;
                         } else {
@@ -92,23 +132,29 @@ namespace TPFinal_AED_BAR.EstruturasDeDados.ArvoreBinaria {
                             esteNode.pai.esq = esteNode.dir;
                         }
                         this.qtde--;
+                        //QUANDO ESTE NODE TIVER 2 FILHOS
                     } else {
+                        //Obter o elemento extremo invertido ao lado da subárvore
                         Node aux = ElementoMaisAEsquerda(esteNode.dir);
 
-                        if (valorItem > (int)esteNode.pai.item) {
-                            
-                            if ((int)aux.item > (int)aux.pai.item)
+                        if(valorItem > (int) esteNode.pai.item) {
+
+                            //Mudar as referências do elemento anterior
+                            if((int) aux.item > (int) aux.pai.item)
                                 aux.pai.dir = esteNode.dir.dir;
                             else
                                 aux.pai.esq = esteNode.esq.esq;
 
+                            //Atualizar o valor do node a ser removido para manter a coerência da arvore binária
                             esteNode.item = aux.item;
 
                         } else {
-                            if ((int)aux.item > (int)aux.pai.item)
+                            //Mudar as referências do elemento anterior
+                            if((int) aux.item > (int) aux.pai.item)
                                 aux.pai.dir = null;
                             else
                                 aux.pai.esq = null;
+                            //Atualizar o valor do node a ser removido para manter a coerência da arvore binária
                             esteNode.item = aux.item;
                         }
                         this.qtde--;
