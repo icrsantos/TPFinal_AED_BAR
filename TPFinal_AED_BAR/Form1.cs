@@ -109,11 +109,13 @@ namespace TPFinal_AED_BAR {
             if(itens != null && itens.Length > 0) {
                 int i = 1;
                 foreach(Object item in itens) {
-                    string[] currentRow = new string[2];
-                    currentRow[0] = i.ToString();
-                    currentRow[1] = item.ToString();
-                    gridDataEstruturas.Rows.Add(currentRow);
-                    i++;
+                    if(item.ToString() != "") {
+                        string[] currentRow = new string[2];
+                        currentRow[0] = i.ToString();
+                        currentRow[1] = item.ToString();
+                        gridDataEstruturas.Rows.Add(currentRow);
+                        i++;
+                    }
                 }
             }
 
