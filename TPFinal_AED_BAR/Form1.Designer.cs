@@ -373,9 +373,8 @@
             this.labelEstruturaAtual.Location = new System.Drawing.Point(331, 167);
             this.labelEstruturaAtual.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelEstruturaAtual.Name = "labelEstruturaAtual";
-            this.labelEstruturaAtual.Size = new System.Drawing.Size(30, 19);
+            this.labelEstruturaAtual.Size = new System.Drawing.Size(0, 19);
             this.labelEstruturaAtual.TabIndex = 26;
-            this.labelEstruturaAtual.Text = "est";
             // 
             // materialFlatButton2
             // 
